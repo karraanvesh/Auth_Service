@@ -50,6 +50,7 @@ const isAuthenticated = async (req, res) => {
     try {
         const token = req.headers['x-access-token'];
         const result = await userService.isAuthenticated(token);
+        console.log(result);
         return res.status(200).json({
             success : true ,
             err: {},
